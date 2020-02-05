@@ -8,7 +8,7 @@
 				font-size:13px;
 				margin: 0;
 				padding: 0;
-				background-color:#eee;
+				background-color:#333333;
 			}
 			
 			.background {
@@ -35,7 +35,7 @@
 			.LinkList li a div{
 				width:180px;
 				min-height:25px;
-				color: #333;
+				color: #888888;
 				margin-top: 5px;
 				padding:5px 0 0px 5px;
 				padding-left:30px;
@@ -54,26 +54,28 @@
 				display: block;
 				height: 1px;
 				border: 0;
-				border-top: 1px solid #ccc;
+				border-top: 1px solid #555555;
 				margin: 1em 0;
 				padding: 0; 
 			}
 			
 			h2{
-				color:#333;
+				color:#888888;
 			}
 			
 			.container{
 				padding:3 10px;
-				background-color: rgba(255,255,255,0.7);
+				background-color: rgba(0,0,0,0.3);
 				box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.1);
-				border: 1px solid #ddd;
+				border: 1px solid #222222;
 				margin-top:10px;
 			}
 		</style>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
 		<script>
 			var c, ctx, weekday;
+			
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 			
 			function padDigits(number, digits) {
 				return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
@@ -111,7 +113,7 @@
 				ctx.translate(-c.width / 2, -c.height / 2);
 				ctx.lineWidth = 15;
 				
-				ctx.fillStyle = '#333333';
+				ctx.fillStyle = '#888888';
 				ctx.font="40px 'Berlin Sans FB'";
 				
 				Draw();
@@ -195,6 +197,7 @@
 	<body onload="Init();">
 		<canvas class="background"></canvas>
 		<div style="max-width:920px; margin:0 auto;">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/n26d2028d05/johannesburg/" data-label_1="JOHANNESBURG" data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated" data-theme="weather_one" >JOHANNESBURG WEATHER</a>
 			<div class="container" style="text-align:center;">
 				<table style="width:100%;">
 					<tr>
